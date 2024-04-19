@@ -14,7 +14,7 @@ const subjectSchema=mongoose.Schema(
             required:true,
         },
         className:{
-           type:Number,
+           type:String,
            
         },
        

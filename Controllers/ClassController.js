@@ -7,12 +7,10 @@ module.exports.addclass=async(req,res)=>{
     try {
         const clasNam = new Class({
             className: req.body.className,
-            schoolName: req.body.schoolName
         });
 
         const existingSclassByName = await Class.findOne({
             className: req.body.className,
-            schoolName: req.body.schoolName
         });
         if (existingSclassByName) {
             res.send({ message: 'Sorry this class name already exists' });
