@@ -17,7 +17,7 @@ router.post('/login', Login);
 // Student routes
 router.get("/getstud/:id",getStudents);
 router.post('/reg', StudentRegister);
-router.post('/Studentlog', studentLogin);
+router.post('/studentlog', studentLogin);
 
 //teacher Routes
 router.post("/teachReg",teacherRegister);

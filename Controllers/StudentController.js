@@ -58,7 +58,7 @@ module.exports.studentLogin=async(req,res)=>{
             return res.status(409).json({message:"invalid password"}); }
         if(student && passwordmatch){
               
-            const token=jwt.sign({ studentId:student.studentID},process.env.Student_KEY,{expiresIn:'24hr'})
+            const token=jwt.sign({ studentID:student.studentID},process.env.Student_KEY,{expiresIn:'24hr'})
                 res.json({
                  
                   
