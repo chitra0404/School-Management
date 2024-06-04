@@ -47,7 +47,7 @@ module.exports.StudentRegister=async(req,res)=>{
 }
 
 module.exports.studentLogin=async(req,res)=>{
-    try{
+    // try{
         const {studentID,email,password}=req.body;
         let student=await Student.findOne({ studentID, email })
         if(!student){
@@ -71,11 +71,11 @@ module.exports.studentLogin=async(req,res)=>{
 
         }
 
-    }
+    // }
    
     
     
-    catch (err) {
-        res.status(500).json(err);
-    }
+    // catch (err) {
+    //     res.status(500).json(err);
+    // }
 }
